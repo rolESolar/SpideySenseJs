@@ -1,0 +1,7 @@
+<link rel="stylesheet" href="/views/reviews/reviews.css" />
+<!-- TODO ADD YOUR MARKUP HERE -->
+<h1>Yelp 2.0</h1>
+
+<label for="destination">Linz</label><br />
+
+<div>{{ score }}</div>
