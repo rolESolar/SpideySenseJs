@@ -8,4 +8,5 @@ module.exports.routes = [
     component: "home",
   },
  ,{path: '/location', component: 'location'}
+ ,{path: '/reviews', component: 'reviews'}
 ];
