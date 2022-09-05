@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="/views/location/location.css">
+<link rel="stylesheet" href="/views/style.css">
+<!-- TODO ADD YOUR MARKUP HERE -->
+
+
+<label for="destination">Linz</label><br />
+
+<div>{{ score }}</div>
+
+
+<nav class="navbar">
+    <ul>
+        <li><a href="#home">Yelp 2.0</a></li>
+    </ul>
+</nav>
+<section id="Map">
+</section>
+<section id="services">
+    <h1 class="headings">Linz</h1>
+    <div class="row">
+        <div class="box">
+            <h1 class="headings">Restaurant Muto</h1>
+        </div>
+        <div class="box">
+            <h1 class="headings">Gelbes Krokodil</h1>
+        </div>
+        <div class="box">
+            <h1 class="headings">Pizzeria Bella</h1>
+        </div>
+    </div>
+</section>
+<section id="contact">
+    <h1 class="headings"></h1>
+    <form action="" class="form">
+        <label>
+        </label>
+        <input type="submit" value="+" id="send">
+    </form>
+</section>
+
+
+
