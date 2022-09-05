@@ -20,6 +20,8 @@ function getValuesfromDatabase() {
     database: "yelp2_0",
   });
 
+  connection.connect();
+  
   con.connect(function (err) {
     if (err) throw err;
     con.query("SELECT score FROM review", function (err, result, fields) {
