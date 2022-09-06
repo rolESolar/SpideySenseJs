@@ -1,5 +1,6 @@
-<link rel="stylesheet" href="/views/location/location.css">
 <link rel="stylesheet" href="/views/style.css">
+<link rel="stylesheet" href="/views/reviews/reviews.css">
+
 <!-- TODO ADD YOUR MARKUP HERE -->
 
 <nav class="navbar">
@@ -12,11 +13,8 @@
 <section id="services">
     <div class="box" *for="restaurantdata in restaurants" ><div class="box"><h1 class="headings">{{restaurantdata.name}}</h1><h2 class="headings">{{restaurantdata.score}}</h2></div></div *endFor>
 </section>
-<section id="contact">
-    <h1 class="headings"></h1>
+<section id="add">
     <form action="" class="form">
-        <label>
-        </label>
         <input type="submit" value="+" id="send">
     </form>
 </section>

@@ -1,5 +1,6 @@
-<link rel="stylesheet" href="/views/location/location.css" />
-<link rel="stylesheet" href="/views/style.css" />
+<link rel="stylesheet" href="/views/style.css">
+<link rel="stylesheet" href="/views/location/location.css">
+
 <!-- TODO ADD YOUR MARKUP HERE -->
 <nav class="navbar">
   <ul>
@@ -11,7 +12,7 @@
   <h1 class="headings"></h1>
   <div class="row">
       
-    <a class="box" *for="locationdata in locations" href="/reviews/?locationNow={{ locationdata.id }}" ><div class="box"><h1 class="headings">{{locationdata.location}}</h1></div></a *endFor>
+    <a *for="locationdata in locations" href="/reviews/?locationNow={{ locationdata.id }}" ><div class="box"><h1 class="headings">{{locationdata.location}}</h1></div></a *endFor>
     <!-- <h1 class="headings">{{ name }}</h1> -->
 <!--
     <a href="/reviews/?locationNow=Wien">
