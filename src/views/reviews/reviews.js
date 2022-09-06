@@ -10,32 +10,14 @@ module.exports = class Reviews {
 
   async data() {
     this.dbConnectionService.establishConnection();
-    let score = await this.dbConnectionService.getValue();
-    console.log(score);
+    let restaurantLocation = await this.dbConnectionService.getRestaurant(
+      location
+    );
+
     console.log(location);
-    return { title: "reviews", score: score[0].score, locationNow: location };
+    return {
+      title: "reviews",
+      restaurantLocation: restaurantLocation[1].restaurantLocation,
+    };
   }
-
-function getValuesfromDatabase() {
-  var mysql = require("mysql");
-
-  var con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "yelp2_0",
-  });
-
-  connection.connect();
-  
-  con.connect(function (err) {
-    if (err) throw err;
-    con.query("SELECT score FROM review", function (err, result, fields) {
-      if (err) throw err;
-      console.log(result);
-      resultScore = result;
-    });
-  });
-  
-  return resultScore;
-}
+};

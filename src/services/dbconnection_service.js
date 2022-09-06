@@ -2,7 +2,6 @@ module.exports = class DbconncectionService {
   // connects to database
   establishConnection() {
     const mysql = require("mysql");
-    // wieso this
     this.connection = mysql.createConnection({
       host: "localhost",
       user: "root",
@@ -11,21 +10,37 @@ module.exports = class DbconncectionService {
     });
   }
 
-  // was macht async ?
-  // wieso this
-
-  //
-  async getValue() {
+  async getRegions() {
     const con = this.connection;
     con.connect();
-    const result = await getColour(con);
+    const result = await getStatement(con);
     con.end();
     return result;
     // Promise als Funktion
-    function getColour(con) {
+    function getStatement(con) {
       return new Promise((resolve, reject) => {
         con.query(
-          "SELECT score FROM review",
+          `SELECT * FROM region`,
+
+          (err, result) => {
+            return err ? reject(err) : resolve(result);
+          }
+        );
+      });
+    }
+  }
+
+  async getRestaurant(a) {
+    const con = this.connection;
+    con.connect();
+    const result = await getStatement(con);
+    con.end();
+    return result;
+    // Promise als Funktion
+    function getStatement(con) {
+      return new Promise((resolve, reject) => {
+        con.query(
+          `SELECT name FROM restaurant WHERE region = "${a}"`,
 
           (err, result) => {
             return err ? reject(err) : resolve(result);
