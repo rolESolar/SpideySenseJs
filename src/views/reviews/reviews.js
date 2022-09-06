@@ -1,25 +1,47 @@
 const ServiceProvider = require("../../../framework/service_provider");
 
-module.exports = class Locations {
+module.exports = class Reviews {
   constructor(params) {}
-  data() {
-    return { title: "reviews" };
+  async data() {
+    this.establishConnection();
+    let score = await this.getValue();
+    console.log(score);
+    return { title: "reviews", score: score[0].score };
+  }
+
+  // connects to database
+  establishConnection() {
+    const mysql = require("mysql");
+    // wieso this
+    this.connection = mysql.createConnection({
+      host: "localhost",
+      user: "root",
+      password: "",
+      database: "yelp2_0",
+    });
+  }
+
+  // was macht async ?
+  // wieso this
+
+  //
+  async getValue() {
+    const con = this.connection;
+    con.connect();
+    const result = await getColour(con);
+    con.end();
+    return result;
+    // Promise als Funktion
+    function getColour(con) {
+      return new Promise((resolve, reject) => {
+        con.query(
+          "SELECT score FROM review",
+
+          (err, result) => {
+            return err ? reject(err) : resolve(result);
+          }
+        );
+      });
+    }
   }
 };
-
-let mysql = require("mysql");
-
-let connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "yelp2_0",
-});
-
-connection.connect(function (err) {
-  if (err) {
-    return console.error("error: " + err.message);
-  }
-
-  console.log("Connected to the MySQL server.");
-});
