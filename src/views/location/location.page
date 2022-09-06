@@ -1,5 +1,6 @@
-<link rel="stylesheet" href="/views/location/location.css">
 <link rel="stylesheet" href="/views/style.css">
+<link rel="stylesheet" href="/views/location/location.css">
+
 <!-- TODO ADD YOUR MARKUP HERE -->
 <nav class="navbar">
     <ul>
@@ -14,7 +15,6 @@
         <a href="/reviews/?locationNow={{location}}">
             <div class="box">
                 <h1 class="headings">Linz</h1>
-
             </div>
         </a>
         
