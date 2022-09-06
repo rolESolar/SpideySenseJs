@@ -1,3 +1,4 @@
+const DbconnectionService = require("./services/dbconnection_service"); 
 const Reviews = require("./views/reviews/reviews"); 
 const Location = require("./views/location/location"); 
 const Home = require("./views/home/home");
@@ -10,4 +11,5 @@ module.exports = function () {
  ServiceProvider.register("location", (params) => {return new Location(params);});
  
  ServiceProvider.register("reviews", (params) => {return new Reviews(params);});
+ ServiceProvider.register("dbconnectionService", () => {return new DbconnectionService();});
 };

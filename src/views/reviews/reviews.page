@@ -8,7 +8,6 @@
 
 <div>{{ score }}</div>-->
 
-
 <nav class="navbar">
     <ul>
         <li><a href="#home">Yelp 2.0</a></li>
