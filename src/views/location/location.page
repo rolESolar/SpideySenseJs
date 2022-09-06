@@ -11,15 +11,23 @@
 <section id="services">
     <h1 class="headings"></h1>
     <div class="row">
-        <div class="box">
-            <h1 class="headings">Linz</h1>
-        </div>
-        <div class="box">
-            <h1 class="headings">Wien</h1>
-        </div>
-        <div class="box">
-            <h1 class="headings">Riga</h1>
-        </div>
+        <a href="/reviews/?locationNow={{location}}">
+            <div class="box">
+                <h1 class="headings">Linz</h1>
+
+            </div>
+        </a>
+        
+        <a href="/reviews/?locationNow=Wien">
+            <div class="box">
+                <h1 class="headings">Wien</h1>
+            </div>
+        </a>
+        <a href="/reviews/?locationNow=Riga">
+            <div class="box">
+                <h1 class="headings">Riga</h1>
+            </div>
+        </a>
     </div>
 </section>
 <section id="contact">

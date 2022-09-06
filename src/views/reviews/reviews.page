@@ -3,7 +3,7 @@
 <!-- TODO ADD YOUR MARKUP HERE -->
 
 
-<label for="destination">Linz</label><br />
+<label for="destination">{{ locationNow }}</label><br />
 
 <div>{{ score }}</div>
 
@@ -16,16 +16,17 @@
 <section id="Map">
 </section>
 <section id="services">
-    <h1 class="headings">Linz</h1>
+    <a href="/location/"><h1 class="headings">{{ locationNow }}</h1></a>
     <div class="row">
+        
         <div class="box">
-            <h1 class="headings">Restaurant Muto</h1>
+            <h2 class="headings">Restaurant Muto</h1>
         </div>
         <div class="box">
-            <h1 class="headings">Gelbes Krokodil</h1>
+            <h2 class="headings">Gelbes Krokodil</h1>
         </div>
         <div class="box">
-            <h1 class="headings">Pizzeria Bella</h1>
+            <h2 class="headings">Pizzeria Bella</h1>
         </div>
     </div>
 </section>
