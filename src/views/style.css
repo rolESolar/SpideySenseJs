@@ -2,31 +2,36 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    }
-    .navbar {
+    font-family: Roboto;
+}
+a {
+    text-decoration: none;
+    color: #2b2b2b;
+}
+.navbar {
     display: flex;
     justify-content: left;
     align-items: center;
     background-color: #f80000;
     position: sticky;
     top: 0;
-    }
-    .navbar ul {
+}
+.navbar ul {
     display: flex;
     list-style: none;
     margin: 20px 0;
-    }
-    .navbar ul li {
-    font-family: Century, serif;
+}
+.navbar ul li {
+    font-family: Roboto, serif;
     font-size: 1.1rem;
-    }
-    .navbar ul li a {
+}
+.navbar ul li a {
     text-decoration: none;
     color: white;
     padding: 8px 25px;
     transition: all .5s ease;
-    }
-    #home {
+}
+#home {
     display: flex;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.2);
@@ -34,8 +39,8 @@
     justify-content: center;
     align-items: center;
     color: #ffffff;
-    }
-    #home::before {
+}
+#home::before {
     content: "";
     position: absolute;
     top: 0;
@@ -45,37 +50,40 @@
     width:500px;
     z-index: -2;
     opacity: .8;
-    }
-    .main {
+}
+.main {
     display: flex;
     flex-direction: column;
-    }
-    .headings {
-    font-family: Century, serif;
+}
+.headings {
+    font-family: Roboto, serif;
     font-size: 3rem;
     text-align: center;
     margin: 40px 0;
-    }
-    .btn {
+}
+h2.headings {
+    font-size: 2rem;
+}
+.btn {
     padding: 10px 35px;
     background-color: transparent;
     border: 1px solid #ffffff;
     outline: none;
     transition: .6s ease;
     border-radius: 15px;
-    }
-    #services {
+}
+#services {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    }
-    .row {
+}
+.row {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     box-sizing: border-box;
-    }
-    .box {
+}
+.box {
     display: flex;
     flex-direction: column;
     width: 350px;
@@ -88,38 +96,35 @@
     background: linear-gradient(to top, #c9c9c9 50%, white 50%);
     background-size: 100% 200%;
     transition: all .8s;
-    }
-    .box:hover {
+}
+.box:hover {
     background-position: left bottom;
     color: white;
     border: none;
     box-shadow: 0 0 20px #2b2b2b;
-    }
-    .form {
+}
+.form {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     align-items: center;
     margin: 20px 0;
-    }
-    #send {
+}
+#send {
     width: 8rem;
     height: 8rem;
     margin: 40px;
     border: none;
     outline: none;
     border-radius: 200px;
-    }
-    #send:hover {
+}
+#send:hover {
     cursor: pointer;
     box-shadow: 0 0 10px white;
-    }
-    input[type="submit"]{
-        text-align: center;
-        font-size:80px;
-    }
-    * {
-    padding: 0;
-    margin: 0;
-    }
+}
+input[type="submit"]{
+    text-align: center;
+    font-size:80px;
+}
+
     
