@@ -30,7 +30,7 @@ module.exports = class DbconncectionService {
     }
   }
 
-  async getRestaurant(a) {
+  async getRestaurants(a) {
     const con = this.connection;
     con.connect();
     const result = await getStatement(con);
@@ -40,7 +40,7 @@ module.exports = class DbconncectionService {
     function getStatement(con) {
       return new Promise((resolve, reject) => {
         con.query(
-          `SELECT name FROM restaurant WHERE region = "${a}"`,
+          `SELECT * FROM restaurant WHERE region = "${a}"`,
 
           (err, result) => {
             return err ? reject(err) : resolve(result);

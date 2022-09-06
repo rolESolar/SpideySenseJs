@@ -2,11 +2,6 @@
 <link rel="stylesheet" href="/views/style.css">
 <!-- TODO ADD YOUR MARKUP HERE -->
 
-
-<label for="destination">{{ locationNow }}</label><br />
-
-<div>{{ score }}</div>
-
 <nav class="navbar">
     <ul>
         <li><a href="#home">Yelp 2.0</a></li>
@@ -15,19 +10,7 @@
 <section id="Map">
 </section>
 <section id="services">
-    <a href="/location/"><h1 class="headings">{{ locationNow }}</h1></a>
-    <div class="row">
-        
-        <div class="box">
-            <h2 class="headings">Restaurant Muto</h1>
-        </div>
-        <div class="box">
-            <h2 class="headings">Gelbes Krokodil</h1>
-        </div>
-        <div class="box">
-            <h2 class="headings">Pizzeria Bella</h1>
-        </div>
-    </div>
+    <div class="box" *for="restaurantdata in restaurants" ><div class="box"><h1 class="headings">{{restaurantdata.name}}</h1><h2 class="headings">{{restaurantdata.score}}</h2></div></div *endFor>
 </section>
 <section id="contact">
     <h1 class="headings"></h1>

@@ -10,14 +10,8 @@ module.exports = class Reviews {
 
   async data() {
     this.dbConnectionService.establishConnection();
-    let restaurantLocation = await this.dbConnectionService.getRestaurant(
-      location
-    );
-
-    console.log(location);
-    return {
-      title: "reviews",
-      restaurantLocation: restaurantLocation[1].restaurantLocation,
-    };
+    let restaurants = await this.dbConnectionService.getRestaurants(location);
+    console.log(restaurants);
+    return { title: "Restaurants", restaurants: restaurants };
   }
 };
