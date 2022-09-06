@@ -2,11 +2,7 @@
 <link rel="stylesheet" href="/views/style.css">
 <!-- TODO ADD YOUR MARKUP HERE -->
 
-
-<label for="destination">Linz</label><br />
-
 <div>{{ score }}</div>
-
 
 <nav class="navbar">
     <ul>
