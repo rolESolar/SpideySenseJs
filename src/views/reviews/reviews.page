@@ -11,6 +11,7 @@
 <section id="Map">
 </section>
 <section id="services">
+    <h1 class="headings">{{ locationShow }}</h1>
     <div class="box" *for="restaurantdata in restaurants" ><div class="box"><h1 class="headings">{{restaurantdata.name}}</h1><h2 class="headings">{{restaurantdata.score}}</h2></div></div *endFor>
 </section>
 <section id="add">
